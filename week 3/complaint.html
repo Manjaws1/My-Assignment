@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lincoln University Student Complaint Form</title>
+
+            <style type="text/css">
+                table{
+                    margin:auto;
+                    width: 75%;
+                    background-color:#F294B4;
+                }
+                
+             
+               .header{
+                height: 50px;
+                background-color: rgb(168, 45, 92);
+                width: 74.5%;
+                margin:auto;
+               }
+
+                h1{
+                    color:white;
+                }
+                img{
+                    float:left;
+                    height:135px;
+                    width:250px;
+                }
+               
+            </style>
+
+</head>
+<body bgcolor="#F0EFF0">
+ 
+    <table class="container">
+        <tr>
+            
+            <td>
+                <img  class="logo" src="images/schoollogo.png" alt="Lincoln University School Logo" name="Lincoln University School Logo" />
+                <table class="header">
+                    <tr>
+                        <td>
+                           
+                                <h1 align="center" >STUDENT COMPLAINT FORM</h1>
+                                <p align="center">Please fill out the following with your complaint,
+                            we will review your request and follow up with you as soon as possible.
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+
+   
+
+
+                <form action="" method="post">
+                    <fieldset>
+                        <legend>
+                            <font size="5" color="purple">Complaint's Details</font>
+                        </legend>
+                            <p>
+                           <label for="firstname"> First Name: </label>
+                           <input type="text" name="firstname" maxlength="15" placeholder="Your name" required autofocus/>
+                                    &nbsp; &nbsp; &nbsp;
+                           <label for="middlename"> Middle Name: </label>
+                           <input type="text" name="middlename" maxlength="10" placeholder="Your third name"required />
+                                     &nbsp; &nbsp; &nbsp;
+                           <label for="lastname"> Last Name: </label>
+                           <input type="text" name="lastname" maxlength="10" placeholder="Your Surname" required/>
+                        </p>
+
+                        <p>
+                            <label for="gender"> Gender: </label>
+                            <input type="radio" name="gender" value="male" checked/> <b>Male</b> 
+                            <input type="radio" name="gender" value="female"/> <b>Female</b> 
+                             &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            <label for="email"> Email: </label>
+                            <input type="email" name="email" class="email" placeholder="manjaws@gmail.com" required/>
+                            &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+                           <label for="id"> Student ID: </label>
+                           <input type="text" name="id" class="id" placeholder="LUC-NGA-001-ADM-1000231" required/>
+                        </p>
+
+                        <p>
+                            <label for="department"> Department: </label>
+                            <select name="departname">
+                                <option value="" selected>Select your department</option>
+                                <option value="biotechnology">BIOTECHNOLOGY</option>
+                                <option value="bus. acct.">BUSINESS ACCOUNTING</option>
+                                <option value="bus. admin">BUSINESS ADMINSTRATION</option>
+                                <option value="cyber security">COMPUTER SCIENCE(CYBER SECURITY AND NETWORK TECHNOLOGY)</option>
+                                <option value="software">COMPUTER SCIENCE(SOFTWARE ENGINEERING)</option>
+                                <option value="medicine">DOCTOR MEDICINE</option>
+                                <option value="enterpre.">ENTERPRENEURSHIP</option>
+                                <option value="nursing">NURSING</option>
+                                <option value="psy">PSYCHOLOGY</option>
+                            </select>
+                                     &nbsp; &nbsp; &nbsp;
+                            <label for="level"> Level: </label>
+                            <select name="level">
+                                <option value="" selected>Your Level</option>
+                                <option value="100l F">100l First semester</option>
+                                <option value="100l S">100l Second semester</option>
+                                <option value="100l  T">100l Third semester</option>
+                                <option value="200l F">200l First semester</option>
+                                <option value="200l S">200l Second semester</option>
+                                <option value="200l  T">200l Third semester</option>
+                                <option value="300l F">300l First semester</option>
+                                <option value="300l S">300l Second semester</option>
+                                <option value="300l  T">300l Third semester</option>
+                                <option value="400l">400l above</option>
+                            </select>
+                          
+                         </p>
+
+                        <p>
+                            <label for="campus"> Campus </label>
+                            <select name="campus">
+                                <option value="" selected>Select Campus</option>
+                                <option value="NSUK">NSUK campus</option>
+                                <option value="Abuja">Abuja campus</option>
+                                <option value="Gombe">Gombe campus</option>
+                                <option value="Malaysia">Malaysia</option>
+                            </select>
+                          
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+                            <label for="telphone"> Tel. Number: </label>
+                            <input type="tel" name="telphone" class="tel" pattern="[0-9]{11}" required/>
+                                      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                             <label for="date"> Date: </label>
+                             <input type="date" name="date" required/>
+                         </p>
+
+                         <p>
+                            <label for="address"> Address: </label>
+                            <textarea name="address"
+                                     value="" rows="5"
+                                    cols="35" wrap="hard">
+                                    </textarea> 
+                                     &nbsp; &nbsp; &nbsp;
+                            <label for="state"> State </label>
+                            <input type="text" name="state" placeholder="Your State" required/>
+                                      &nbsp; &nbsp; &nbsp;
+                            <label for="country"> Country: </label>
+                            <input type="text" name="country"  placeholder="Your country" required/>
+                                </p>  
+                    </fieldset>
+                          
+                   <br/><br/>
+                                <fieldset>
+                                     <legend>
+                                            <font size="5" color="purple">Information about your complaint</font>
+                                     </legend>
+                            <label for="complaint">Types of Complaints:</label>
+                            <input type="checkbox" name="complaint" value="sexual"/>Sexual Harassment
+                            <input type="checkbox" name="complaint" value="reg."/>Registration Delay
+                            <input type="checkbox" name="complaint" value="equipment"/>Lack of equipment<br/>
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                             &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  
+                             <input type="checkbox" name="complaint" value="result"/>Result Delay
+                            <input type="checkbox" name="complaint" value="acad. Policies" checked/>Academic Policies
+                            <input type="checkbox" name="complaint" value="safety"/>Health and Safety<br/>
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                             &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+                             <input type="checkbox" name="complaint" value="comm. channel"/>Communication Channel
+                            <input type="checkbox" name="complaint" value="extracu. act."/>Extracurricular Activities
+                            <input type="checkbox" name="complaint" value="hostel iss."/>Hostel Issues
+                           
+
+                            <p>If your complaint is not the checkbox, Write your complaint inside this textarea.</p>
+                            <textarea name="complaint area"
+                                    rows="10"
+                                     cols="50"
+                                     wrap="physical"></textarea>
+
+                                     <p align="right">
+                                        <input type="reset" name="reset" value="Reset"/> &nbsp;&nbsp;&nbsp;
+                                        <input type="submit" name="sumbit" value="Submit"/></p>
+                        </fieldset>
+                            
+                </form>
+           
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
