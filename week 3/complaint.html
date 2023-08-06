@@ -30,6 +30,13 @@
                     width:250px;
                 }
                
+                .button{
+                    width:80px;
+                    border:0px;
+                    background-color:red;
+                    border-radius: 10px;
+                    color:white;
+                }
             </style>
 
 </head>
@@ -62,7 +69,7 @@
                         </legend>
                             <p>
                            <label for="firstname"> First Name: </label>
-                           <input type="text" name="firstname" maxlength="15" placeholder="Your name" required autofocus/>
+                           <input  type="text" name="firstname" maxlength="15" placeholder="Your name" required autofocus/>
                                     &nbsp; &nbsp; &nbsp;
                            <label for="middlename"> Middle Name: </label>
                            <input type="text" name="middlename" maxlength="10" placeholder="Your third name"required />
@@ -137,7 +144,7 @@
                             <label for="address"> Address: </label>
                             <textarea name="address"
                                      value="" rows="5"
-                                    cols="35" wrap="hard">
+                                    cols="35" wrap="hard" style="background-color: rgba(211, 211, 211, 0.363);">
                                     </textarea> 
                                      &nbsp; &nbsp; &nbsp;
                             <label for="state"> State </label>
@@ -166,18 +173,20 @@
                              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
                              <input type="checkbox" name="complaint" value="comm. channel"/>Communication Channel
                             <input type="checkbox" name="complaint" value="extracu. act."/>Extracurricular Activities
-                            <input type="checkbox" name="complaint" value="hostel iss."/>Hostel Issues
-                           
+                            <input type="checkbox" name="complaint" value="hostel iss."/>Hostel Issues  <br/>
+                         
+                         
+                           Room Number: <input type="number" name="room" value="" style="background-color: rgba(194, 192, 192, 0.137);"/>
 
                             <p>If your complaint is not the checkbox, Write your complaint inside this textarea.</p>
                             <textarea name="complaint area"
                                     rows="10"
                                      cols="50"
-                                     wrap="physical"></textarea>
+                                     wrap="physical" style="background-color: rgba(211, 211, 211, 0.363);"></textarea>
 
                                      <p align="right">
-                                        <input type="reset" name="reset" value="Reset"/> &nbsp;&nbsp;&nbsp;
-                                        <input type="submit" name="sumbit" value="Submit"/></p>
+                                        <input type="reset" name="reset" class="button" value="Reset"/> &nbsp;&nbsp;&nbsp;
+                                        <input type="submit" name="sumbit" class="button" value="Submit"/></p>
                         </fieldset>
                             
                 </form>
