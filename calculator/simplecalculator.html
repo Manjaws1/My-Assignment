@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+    div#box{
+        width:20%;
+        display:flex;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    div input{
+        margin:10px 0px 5px 0px;
+        min-height:40px;
+        border-radius: 5px;
+        outline: none;
+        
+    }
+
+    div label{
+        font-size: 20px;
+        font-family: Arial;
+
+    }
+
+    div#button{
+        display:flex;
+        flex-direction:row;
+        justify-content: space-between;
+    }
+
+    div .button{
+        width:20%;
+        min-height: 30px;
+        font-size: 20px;
+        background-color: blue;
+        border:none;
+    }
+
+    </style>
+</head>
+<body> 
+
+
+<div id="box">
+<label>Enter the first Number:</label>
+<input type="number" id="num1" placeholder="0"/>
+
+<label>Enter the Second Number:</label>
+<input type="number" id="num2" placeholder="0"/>
+
+<label>Result</label>
+<input type="number" id="result" disabled/>
+
+        <div id="button">
+        <button class="button" type="button" onclick="calculate('+')">+</button>
+        <button  class="button" type="button" onclick="calculate('-')">-</button>
+        <button class="button" type="button" onclick="calculate('/')">/</button>
+        <button  class="button" type="button" onclick="calculate('*')">*</button>
+        </div>
+</div>
+
+
+    <script type="text/javascript">
+    
+    function calculate(operator){
+    var num1= parseFloat (document.getElementById("num1").value);
+    var num2= parseFloat (document.getElementById("num2").value);
+    var result;
+    // using if...else if... else
+    /*if (operator == '+') {
+        result = num1 + num2;
+    }
+    else if (operator == '-') {
+        result = num1 - num2;
+    }
+    else if (operator == '*') {
+        result = num1 * num2;
+    }
+    else {
+        result = num1 / num2;
+    }*/
+
+    switch(operator){
+        case'+': 
+        result=num1 + num2;
+        break;
+
+        case'*': 
+        result=num1 * num2;
+        break;
+
+        case'-': 
+        result=num1 - num2;
+        break;
+
+        case'/': 
+        result=num1 / num2;
+        break;
+    }
+    
+    // display the result
+    document.getElementById("result").value="result:"+ result;
+    
+}
+</script>
+
+
+</body>
+</html>
