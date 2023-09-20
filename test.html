@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing:border-box;
+        }
+        div#container{
+            background-color: skyblue;
+            height: 620px;
+           
+        }
+        #flexbox{
+            width:90%;
+            margin:auto;
+            border-top:3px solid blue;
+            background-color: white;
+            border-radius:2px ;
+            display:flex;
+            flex-direction: column;
+            
+        }
+
+        .flexitem{
+            border:1px solid black;
+            height: 50px;
+            line-height: 50px;
+            margin:10px 10px 6px  10px ;
+            padding-left: 20px;
+            border-radius: 5px;
+            font-family: Arial;
+            font-size: 20px;
+        }
+        .green{
+            color:green;
+        }
+
+        .black{
+            color:black;
+        }
+
+        .blue{
+            color:blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="flexbox">
+            <div class="flexitem green">Personal Details &check;</div>
+            <div class="flexitem green">Address &check;</div>
+            <div class="flexitem green">Family Details &check;</div>
+            <div class="flexitem green">Identification Document &check;</div>
+            <div class="flexitem green"> Education Details &check;</div>
+            <div class="flexitem green"> Approval Status &check;</div>
+            <div class="flexitem black">Fees Configuration &check;</div>
+            <div class="flexitem blue"> Communication Details &check;</div>
+            <div class="flexitem black">Letters & Document &check;</div>
+        </div>
+    </div>
+</body>
+</html>
