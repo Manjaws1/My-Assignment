@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular expression</title>
+    <style>
+			*{
+				padding:0px;
+				margin:0px;
+				box-sizing:border-box;
+				font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			}
+
+			div#wrapper{
+				width:35%;
+				border:1px solid #CED4DB;
+				margin:auto;
+				border-radius:5px;
+				margin-top:50px;
+				}
+			h2{
+				text-align:center;
+				padding-top:20px;
+				padding-bottom:10px;
+			}
+
+			#flexbox {
+				display:block;
+			}
+
+			#flexbox form{
+				display:flex;
+				flex-direction:column;
+			}
+			
+			
+			.input{
+				margin:10px 20px ;
+				padding-left:10px;
+				height:45px;
+				border-radius:5px;
+				outline:none;
+				border: 1px solid #CED4DB;
+			}
+			
+			.input:focus{
+				   border-color:#719ECE;
+    				   box-shadow:0 0 4px #719ECE;
+			}
+
+			.btn{
+				margin:10px 20px ;
+				padding-left:10px;
+				height:40px;
+				border-radius:5px;
+				background-color: #198754;
+				color:white;
+				font-size:12pt;
+				cursor:pointer;
+				transition: 0.5s ease in;
+			}
+
+			button:hover{
+			background-color: #157348;
+  			  border-color:#157348;
+			}
+			
+	
+			input::placeholder{
+				font-size:12pt;
+			}
+			
+
+		</style>
+
+    
+</head>
+<body>
+  <div id="wrapper"> 
+    <h2>Regular expression to validate form </h2>
+    
+    <div id="flexbox">
+      <form action="" method="post">
+
+      <input type="email" id="email" class="input" placeholder="Enter Your Email" required/>
+      <input type="password"  id="password" class="input" placeholder="Enter Your password" required/>
+      <input type="tel" id="telephone" class="input" placeholder="Enter Your Telephone" required/>
+      <button type="submit" class="input btn" onclick="validateForm()">Submit</button>
+
+      </form>
+    </div>
+    
+  </div>
+  
+<script>
+
+function validateForm() {
+
+  var password = document.getElementById('password').value;
+  var telephone = document.getElementById('telephone').value;
+  var email = document.getElementById('email').value;
+
+
+  var passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{6,}$/;
+  var telephoneRegex = /^\+?[0-9]{1,19}$/;
+  var emailRegex = /^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/;
+
+  
+  if (!passwordRegex.test(password)) {
+    alert('The password must contain at least one lowercase letter, at least one uppercase letter, at least one digit, and be at least 6 characters long.');
+    return false;
+  }
+
+  if (!telephoneRegex.test(telephone)) {
+    alert('The telephone number must start with an optional `+` sign, followed by 1 to 19 digits.');
+    return false;
+  }
+
+  if (!emailRegex.test(email)) {
+    alert('The email address must contain at least one character before the `@` sign, and at least two characters after the `@` sign. The domain name must also contain at least two characters.');
+    return false;
+  }
+
+  
+  return true;
+}
+</script>
+</body>
+</html>
